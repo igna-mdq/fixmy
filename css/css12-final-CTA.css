@@ -1,0 +1,31 @@
+.cta {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.cta .btn-primary {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.cta .btn-primary:hover {
+    background-color: var(--gray-light);
+    color: var(--primary-dark);
+}

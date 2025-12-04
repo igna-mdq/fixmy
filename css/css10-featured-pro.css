@@ -1,0 +1,128 @@
+.featured-pros {
+    background-color: var(--white);
+}
+
+.professionals-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.professional-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-light);
+}
+
+.professional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.professional-header {
+    padding: 0.75rem 1rem;
+    background-color: var(--light);
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge.verified {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.badge.available {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+.professional-avatar {
+    padding: 1.5rem 1rem 0;
+    text-align: center;
+}
+
+.avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.professional-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.professional-name {
+    margin-bottom: 0.25rem;
+}
+
+.professional-profession {
+    color: var(--gray-dark);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.professional-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 0.875rem;
+}
+
+.rating-text {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.professional-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.professional-details p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-dark);
+    margin-bottom: 0;
+}
+
+.professional-details i {
+    color: var(--primary);
+}
+
+.professional-actions {
+    padding: 0 1rem 1.5rem;
+}

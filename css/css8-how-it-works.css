@@ -1,0 +1,757 @@
+/* ============================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA CÓMO FUNCIONA
+   SIN CONFLICTOS CON ESTILOS GENERALES
+   ============================================ */
+
+/* Hero específico para Cómo funciona */
+.como-hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+    text-align: center;
+}
+
+.como-hero .hero-title {
+    margin-bottom: 1rem;
+}
+
+.como-hero .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-dark);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Tabs de navegación */
+.como-tabs-nav {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--gray-light);
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.como-tabs-container {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.como-tab-btn {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.como-tab-btn:hover {
+    color: var(--primary);
+}
+
+.como-tab-btn.activo {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.como-tab-btn i {
+    font-size: 1.25rem;
+}
+
+/* Contenido de las tabs */
+.como-tab-contenido {
+    display: none;
+    animation: como-fadeIn 0.3s ease;
+}
+
+.como-tab-contenido.activo {
+    display: block;
+}
+
+@keyframes como-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pasos principales - CLASES CORREGIDAS */
+.como-paso {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.como-paso:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* CLASE CORREGIDA: usando como-step- para evitar conflicto con css8-how-it-works.css */
+.como-step-numero-grande {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.como-paso-contenido {
+    flex: 1;
+}
+
+.como-paso-contenido h2 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.como-paso-contenido p {
+    color: var(--gray-dark);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Ejemplos y características */
+.como-ejemplo-card {
+    background-color: var(--light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.como-ejemplo-card h4 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.como-lista-ejemplos {
+    list-style: none;
+    padding: 0;
+}
+
+.como-lista-ejemplos li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-dark);
+}
+
+.como-lista-ejemplos li i {
+    color: var(--primary);
+    margin-top: 0.25rem;
+}
+
+/* Grid de características */
+.como-caracteristicas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.como-caracteristica {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.como-caracteristica:hover {
+    transform: translateY(-5px);
+}
+
+.como-caracteristica-icono {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-light);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.como-caracteristica h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.como-caracteristica p {
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+/* Opciones de contacto */
+.como-opciones-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.como-opcion-contacto {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.como-opcion-contacto:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.como-opcion-icono {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.como-opcion-icono.whatsapp {
+    background-color: #25D366;
+}
+
+.como-opcion-icono.phone {
+    background-color: var(--primary);
+}
+
+.como-opcion-contacto h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.como-opcion-contacto p {
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+/* Características de registro */
+.como-caracteristicas-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.como-caracteristica-reg {
+    background-color: var(--light);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.como-caracteristica-reg h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.como-caracteristica-reg h4 i {
+    color: var(--success);
+}
+
+.como-caracteristica-reg p {
+    color: var(--gray-dark);
+    margin: 0;
+    padding-left: 2.25rem;
+}
+
+/* Consejos para perfil */
+.como-consejos-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.como-consejo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.como-consejo-icono {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-light);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.como-consejo-contenido h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.como-consejo-contenido p {
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+/* Planes de precios */
+.como-comparacion-planes {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--gray-light);
+}
+
+.como-comparacion-planes h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.como-planes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.como-plan-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.como-plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.como-plan-card.destacado {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.como-plan-badge {
+    position: absolute;
+    top: -12px;
+    right: 2rem;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.como-plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.como-plan-header h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.como-plan-precio {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.como-plan-precio span {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+
+.como-plan-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.como-plan-caracteristicas li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-dark);
+}
+
+.como-plan-caracteristicas li i {
+    color: var(--success);
+}
+
+/* Características de gestión */
+.como-caracteristicas-gestion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.como-caracteristica-gestion {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.como-gestion-icono {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-light);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.como-caracteristica-gestion h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.como-caracteristica-gestion p {
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+/* CTA específico */
+.como-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--light);
+    border-radius: var(--radius-lg);
+    margin-top: 4rem;
+}
+
+.como-cta h2 {
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+/* Preguntas frecuentes */
+.como-faq-seccion {
+    background-color: var(--light);
+}
+
+.como-faq-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.como-faq-item {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.como-faq-pregunta {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.como-faq-pregunta:hover {
+    background-color: var(--primary-light);
+}
+
+.como-faq-pregunta i {
+    transition: transform 0.3s ease;
+}
+
+.como-faq-pregunta.activo i {
+    transform: rotate(180deg);
+}
+
+.como-faq-respuesta {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.como-faq-respuesta.activo {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+.como-faq-respuesta p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botón flotante de compartir */
+.como-share-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.como-share-btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.como-share-btn:active {
+    transform: scale(0.95);
+}
+
+.como-share-btn.como-fade-in {
+    animation: como-fadeIn 0.5s ease;
+}
+
+/* Tooltips */
+.como-tooltip-text {
+    position: fixed !important;
+    animation: como-tooltipFade 0.2s ease;
+    pointer-events: none;
+}
+
+@keyframes como-tooltipFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   MEDIA QUERIES PARA CÓMO FUNCIONA
+   ================================ */
+
+@media (min-width: 768px) {
+
+    /* Hero */
+    .como-hero {
+        padding: 5rem 0;
+    }
+
+    /* Tabs */
+    .como-tabs-container {
+        justify-content: center;
+        overflow-x: visible;
+    }
+
+    /* Pasos */
+    .como-paso {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .como-step-numero-grande {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    /* Grids */
+    .como-caracteristicas-grid,
+    .como-opciones-contacto,
+    .como-planes-grid,
+    .como-caracteristicas-gestion {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .como-planes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .como-plan-card.destacado {
+        transform: scale(1.05);
+    }
+
+    /* Contacto */
+    .como-opciones-contacto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FAQ */
+    .como-faq-contenedor {
+        padding: 0;
+    }
+
+    /* Botón compartir */
+    .como-share-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Hero */
+    .como-hero {
+        padding: 6rem 0;
+    }
+
+    .como-hero .hero-title {
+        font-size: 3rem;
+    }
+
+    .como-hero .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Tabs */
+    .como-tab-btn {
+        padding: 1.5rem 3rem;
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .como-share-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+/**/
+
+/* ============================================
+   CÓMO FUNCIONA
+============================================ */
+
+.how-it-works {
+    background-color: var(--white);
+}
+
+.steps-container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--light);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-number {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.step-description {
+    color: var(--gray-dark);
+}

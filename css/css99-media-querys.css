@@ -1,0 +1,114 @@
+/* ============================================
+MEDIA QUERIES - TABLET (≥ 768px)
+============================================ */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Hero */
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Header */
+    .nav-menu {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .hero-image {
+        margin-top: 0;
+    }
+
+    /* Cómo funciona */
+    .steps-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Categorías */
+
+    .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Profesionales destacados */
+
+    .professionals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonios */
+
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+MEDIA QUERIES - DESKTOP (≥ 1024px)
+============================================ */
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Profesionales destacados */
+
+    .professionals-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Secciones con más padding */
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* ============================================
+MEDIA QUERIES - DESKTOP GRANDE (≥ 1280px)
+============================================ */
+@media (min-width: 1280px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
