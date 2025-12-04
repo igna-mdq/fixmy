@@ -1,4 +1,4 @@
-# 📚 Proyecto de Práctica - HTML/CSS/JS
+# 📚 Práctica - HTML/CSS/JS
 
 Práctica Fundamentos de Desarrollo Web
 
