@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Usuarios Registrados</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="pagina-admin">
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1><i class="fas fa-users"></i> Usuarios Registrados - Provecino</h1>
+            <div class="admin-actions">
+                <button id="refreshBtn" class="btn btn-primary">
+                    <i class="fas fa-sync-alt"></i> Actualizar
+                </button>
+                <button id="exportBtn" class="btn btn-outline">
+                    <i class="fas fa-download"></i> Exportar CSV
+                </button>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- Estadísticas -->
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon total">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalUsuarios">0</h3>
+                        <p>Total de Usuarios</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon active">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="usuariosActivos">0</h3>
+                        <p>Usuarios Activos</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon electricista">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalElectricistas">0</h3>
+                        <p>Electricistas</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon mar-del-plata">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="usuariosMDP">0</h3>
+                        <p>En Mar del Plata</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="admin-filters">
+                <div class="filter-group">
+                    <label for="filterOficio"><i class="fas fa-tools"></i> Filtrar por oficio:</label>
+                    <select id="filterOficio" class="filter-select">
+                        <option value="todos">Todos los oficios</option>
+                        <option value="electricista">Electricista</option>
+                        <option value="plomero">Plomero</option>
+                        <option value="gasista">Gasista</option>
+                        <option value="pintor">Pintor</option>
+                        <option value="albanil">Albañil</option>
+                        <option value="carpintero">Carpintero</option>
+                        <option value="mecanico">Mecánico</option>
+                        <option value="tecnico">Técnico</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterCiudad"><i class="fas fa-map-marker-alt"></i> Filtrar por ciudad:</label>
+                    <select id="filterCiudad" class="filter-select">
+                        <option value="todos">Todas las ciudades</option>
+                        <option value="Mar del Plata">Mar del Plata</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Rosario">Rosario</option>
+                        <option value="Mendoza">Mendoza</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="searchInput"><i class="fas fa-search"></i> Buscar:</label>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Nombre, email, teléfono...">
+                </div>
+            </div>
+
+            <!-- Tabla de usuarios -->
+            <div class="admin-table-container">
+                <table class="admin-table" id="usuariosTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Oficio</th>
+                            <th>Ciudad</th>
+                            <th>Experiencia</th>
+                            <th>Fecha Registro</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuariosTableBody">
+                        <!-- Los usuarios se cargarán aquí -->
+                    </tbody>
+                </table>
+
+                <div class="no-users" id="noUsersMessage" style="display: none;">
+                    <div class="no-users-icon">
+                        <i class="fas fa-users-slash"></i>
+                    </div>
+                    <h3>No hay usuarios registrados</h3>
+                    <p>Los usuarios que se registren aparecerán aquí.</p>
+                </div>
+            </div>
+
+            <!-- Detalles del usuario -->
+            <div class="user-details-modal" id="userDetailsModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Detalles del Usuario</h2>
+                        <button class="modal-close" id="closeModalBtn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="userDetailsContent">
+                        <!-- Los detalles se cargarán aquí -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="admin-footer">
+            <p>Sistema de Administración - Provecino</p>
+            <p id="lastUpdate">Última actualización: --:--:--</p>
+        </footer>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
