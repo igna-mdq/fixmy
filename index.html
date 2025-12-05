@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provecino - Encontrá profesionales de confianza en tu zona</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/home/igna/Documentos/Procedimientos/fix-my/index.html" class="logo">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Provecino</span>
+                </a>
+
+                <!-- Menú desktop -->
+                <div class="nav-menu">
+                    <a href="./buscar.html" class="nav-link">Buscar</a>
+                    <a href="./como-funciona.html" class="nav-link">Cómo funciona</a>
+                    <a href="./registro.html" class="nav-link btn btn-outline">Ingresar</a>
+                </div>
+
+                <!-- Menú hamburguesa mobile -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menú móvil (oculto por defecto) -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/buscar" class="mobile-nav-link">Buscar</a>
+                <a href="/como-funciona" class="mobile-nav-link">Cómo funciona</a>
+                <a href="/registro" class="mobile-nav-link">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Encontrá al profesional ideal para cada trabajo</h1>
+                <p class="hero-subtitle">Conectamos vecinos con los mejores especialistas de tu zona. Confiable, rápido
+                    y sin complicaciones.</p>
+                <div class="hero-buttons">
+                    <a href="/buscar" class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i>
+                        Buscar Profesionales
+                    </a>
+                    <a href="/registro" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarme Gratis
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-tools"></i>
+                    <p>Ilustración de profesionales trabajando</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo Funciona -->
+    <section class="section how-it-works">
+        <div class="container">
+            <h2 class="section-title">Cómo funciona Provecino</h2>
+            <p class="section-subtitle">Encontrar al profesional perfecto es muy simple</p>
+
+            <div class="steps-container">
+                <!-- Paso 1 -->
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">Busca por oficio o necesidad</h3>
+                    <p class="step-description">Decinos qué necesitás reparar, construir o instalar.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="step-title">Compara perfiles y reseñas</h3>
+                    <p class="step-description">Revisá experiencias de otros vecinos y elegí con confianza.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="step-title">Contacta directo con el profesional</h3>
+                    <p class="step-description">Coordiná el trabajo por WhatsApp o llamada, sin intermediarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section class="section categories">
+        <div class="container">
+            <h2 class="section-title">Los oficios más buscados</h2>
+            <p class="section-subtitle">Encontrá especialistas para cualquier necesidad</p>
+
+            <div class="categories-grid">
+                <!-- Categoría 1 -->
+                <a href="/buscar?categoria=electricista" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="category-title">Electricista</h3>
+                    <p class="category-count">150+ profesionales</p>
+                </a>
+
+                <!-- Categoría 2 -->
+                <a href="/buscar?categoria=plomero" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3 class="category-title">Plomería</h3>
+                    <p class="category-count">120+ profesionales</p>
+                </a>
+
+                <!-- Categoría 3 -->
+                <a href="/buscar?categoria=gasista" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="category-title">Gasista</h3>
+                    <p class="category-count">80+ profesionales</p>
+                </a>
+
+                <!-- Categoría 4 -->
+                <a href="/buscar?categoria=pintor" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="category-title">Pintor</h3>
+                    <p class="category-count">200+ profesionales</p>
+                </a>
+
+                <!-- Categoría 5 -->
+                <a href="/buscar?categoria=albanil" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="category-title">Albañil</h3>
+                    <p class="category-count">300+ profesionales</p>
+                </a>
+
+                <!-- Categoría 6 -->
+                <a href="/buscar?categoria=carpintero" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="category-title">Carpintero</h3>
+                    <p class="category-count">90+ profesionales</p>
+                </a>
+
+                <!-- Categoría 7 -->
+                <a href="/buscar?categoria=mecanico" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="category-title">Mecánico</h3>
+                    <p class="category-count">180+ profesionales</p>
+                </a>
+
+                <!-- Categoría 8 -->
+                <a href="/buscar?categoria=tecnico" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="category-title">Técnico</h3>
+                    <p class="category-count">110+ profesionales</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Profesionales Destacados -->
+    <section class="section featured-pros">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Profesionales destacados</h2>
+                <a href="/buscar" class="btn btn-link">
+                    Ver todos
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="professionals-grid" id="featuredProfessionals">
+                <!-- Las tarjetas se cargarán con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros vecinos</h2>
+            <p class="section-subtitle">Experiencias reales de la comunidad</p>
+
+            <div class="testimonials-container">
+                <!-- Testimonio 1 -->
+                <div class testimonial-card>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Encontré un electricista en menos de una hora. Excelente trabajo y muy
+                        buen precio. ¡Recomiendo 100%!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Villa St. John, Mar del Plata</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Necesitaba un plomero urgente por una pérdida. En 20 minutos tenía a
+                        alguien en casa. ¡Salvación total!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Rodríguez</h4>
+                            <p>Centro, Mar del Plata</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Sos profesional?</h2>
+                <p class="cta-subtitle">Sumate a la red más confiable y conseguí más trabajos en tu zona.</p>
+                <a href="/registro" class="btn btn-primary btn-lg">
+                    <i class="fas fa-user-plus"></i>
+                    Crear mi perfil gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span class="logo-text">Provecino</span>
+                    </a>
+                    <p class="footer-description">Conectando vecinos con profesionales de confianza desde 2024.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Vecinos</h4>
+                        <a href="/buscar" class="footer-link">Buscar Profesionales</a>
+                        <a href="/como-funciona" class="footer-link">Cómo funciona</a>
+                        <a href="/preguntas-frecuentes" class="footer-link">Preguntas frecuentes</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Profesionales</h4>
+                        <a href="/registro" class="footer-link">Registrarse gratis</a>
+                        <a href="/como-funciona#profesionales" class="footer-link">Cómo funciona</a>
+                        <a href="/contacto" class="footer-link">Contacto</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="/terminos" class="footer-link">Términos de uso</a>
+                        <a href="/privacidad" class="footer-link">Política de privacidad</a>
+                        <a href="/cookies" class="footer-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Provecino. Todos los derechos reservados.</p>
+                <p class="footer-note">Mar del Plata, Buenos Aires, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Al final del body, antes de cerrar </body> -->
+    <div style="position: fixed; bottom: 10px; right: 10px; z-index: 9999;">
+        <a href="admin.html"
+            style="text-decoration: none; background: var(--primary); color: white; padding: 8px 12px; border-radius: 20px; font-size: 12px; opacity: 0.3; transition: opacity 0.3s;"
+            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.3'">
+            👁️ Admin
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
