@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Provecino</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/registro.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Provecino</span>
+                </a>
+
+                <!-- Menú desktop -->
+                <div class="nav-menu">
+                    <a href="/buscar" class="nav-link">Buscar</a>
+                    <a href="/como-funciona" class="nav-link">Cómo funciona</a>
+                    <a href="/registro" class="nav-link btn btn-outline active">Ingresar</a>
+                </div>
+
+                <!-- Menú hamburguesa mobile -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menú móvil -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/buscar" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </a>
+                <a href="/como-funciona" class="mobile-nav-link">Cómo funciona</a>
+                <a href="/registro" class="mobile-nav-link">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Selector de tipo de usuario -->
+                <div class="auth-type-selector">
+                    <button class="auth-type-btn active" id="registerBtn">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarme
+                    </button>
+                    <button class="auth-type-btn" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Iniciar sesión
+                    </button>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <form class="auth-form active" id="registerForm">
+                    <div class="auth-header">
+                        <h1>Creá tu cuenta profesional</h1>
+                        <p>Completá tus datos para comenzar a recibir trabajos</p>
+                    </div>
+
+                    <div class="form-step active" id="step1">
+                        <h3 class="step-title">1. Información personal</h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="apellido">Apellido *</label>
+                                <input type="text" id="apellido" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" class="form-input" required>
+                                <small class="form-help">Usaremos este email para contactarte</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" class="form-input" required>
+                                <small class="form-help">Los clientes te contactarán por este número</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad donde trabajás *</label>
+                            <select id="ciudad" class="form-select" required>
+                                <option value="">Seleccioná una ciudad</option>
+                                <option value="Mar del Plata" selected>Mar del Plata</option>
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Rosario">Rosario</option>
+                                <option value="Mendoza">Mendoza</option>
+                            </select>
+                            <small class="form-help warning">⚠️ Por el momento solo aceptamos registros en Mar del
+                                Plata</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary next-step" data-next="step2">
+                                Siguiente
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step2">
+                        <h3 class="step-title">2. Tu oficio y experiencia</h3>
+
+                        <div class="form-group">
+                            <label>¿Cuál es tu oficio principal? *</label>
+                            <div class="skills-grid">
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="electricista">
+                                    <div class="skill-card">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Electricista</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="plomero">
+                                    <div class="skill-card">
+                                        <i class="fas fa-faucet"></i>
+                                        <span>Plomero</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="gasista">
+                                    <div class="skill-card">
+                                        <i class="fas fa-fire"></i>
+                                        <span>Gasista</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="pintor">
+                                    <div class="skill-card">
+                                        <i class="fas fa-paint-roller"></i>
+                                        <span>Pintor</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="albanil">
+                                    <div class="skill-card">
+                                        <i class="fas fa-home"></i>
+                                        <span>Albañil</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="carpintero">
+                                    <div class="skill-card">
+                                        <i class="fas fa-hammer"></i>
+                                        <span>Carpintero</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="mecanico">
+                                    <div class="skill-card">
+                                        <i class="fas fa-car"></i>
+                                        <span>Mecánico</span>
+                                    </div>
+                                </label>
+
+                                <label class="skill-option">
+                                    <input type="radio" name="oficio" value="tecnico">
+                                    <div class="skill-card">
+                                        <i class="fas fa-laptop"></i>
+                                        <span>Técnico</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experiencia">Años de experiencia *</label>
+                            <select id="experiencia" class="form-select" required>
+                                <option value="">Seleccioná</option>
+                                <option value="menos-1">Menos de 1 año</option>
+                                <option value="1-3">1 a 3 años</option>
+                                <option value="3-5">3 a 5 años</option>
+                                <option value="5-10">5 a 10 años</option>
+                                <option value="mas-10">Más de 10 años</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción breve</label>
+                            <textarea id="descripcion" class="form-textarea" rows="3"
+                                placeholder="Contá brevemente sobre tu experiencia, especialidades o qué tipo de trabajos realizás..."></textarea>
+                            <small class="form-help">Esta descripción aparecerá en tu perfil público</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step1">
+                                <i class="fas fa-arrow-left"></i>
+                                Atrás
+                            </button>
+                            <button type="button" class="btn btn-primary next-step" data-next="step3">
+                                Siguiente
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step3">
+                        <h3 class="step-title">3. Seguridad y credenciales</h3>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña *</label>
+                            <div class="password-input">
+                                <input type="password" id="password" class="form-input" required>
+                                <button type="button" class="password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <small class="form-help">Mínimo 8 caracteres, con letras y números</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar contraseña *</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" class="form-input" required>
+                                <button type="button" class="password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dni">Número de DNI *</label>
+                            <input type="text" id="dni" class="form-input" required>
+                            <small class="form-help">Lo usaremos solo para verificar tu identidad</small>
+                        </div>
+
+                        <div class="verification-options">
+                            <h4>Verificación adicional (opcional)</h4>
+                            <p>Agregá esta información para ganar más confianza:</p>
+
+                            <div class="verification-group">
+                                <label class="verification-option">
+                                    <input type="checkbox" id="tieneMatricula">
+                                    <span class="checkmark"></span>
+                                    <div class="verification-content">
+                                        <h5><i class="fas fa-id-card"></i> Tengo matrícula profesional</h5>
+                                        <p>Ej: gasista matriculado, electricista certificado</p>
+                                    </div>
+                                </label>
+
+                                <label class="verification-option">
+                                    <input type="checkbox" id="tieneSeguro">
+                                    <span class="checkmark"></span>
+                                    <div class="verification-content">
+                                        <h5><i class="fas fa-shield-alt"></i> Tengo seguro de responsabilidad civil
+                                        </h5>
+                                        <p>Cubre posibles daños durante el trabajo</p>
+                                    </div>
+                                </label>
+
+                                <label class="verification-option">
+                                    <input type="checkbox" id="aceptaTerminos">
+                                    <span class="checkmark"></span>
+                                    <div class="verification-content">
+                                        <h5><i class="fas fa-file-contract"></i> Acepto los términos y condiciones
+                                        </h5>
+                                        <p>He leído y acepto los <a href="/terminos" target="_blank">términos de
+                                                uso</a>
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step2">
+                                <i class="fas fa-arrow-left"></i>
+                                Atrás
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-check"></i>
+                                Completar registro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-progress">
+                        <div class="progress-steps">
+                            <div class="progress-step active" data-step="1"></div>
+                            <div class="progress-step" data-step="2"></div>
+                            <div class="progress-step" data-step="3"></div>
+                        </div>
+                        <div class="progress-text">Paso <span id="currentStep">1</span> de 3</div>
+                    </div>
+                </form>
+
+                <!-- Formulario de Login -->
+                <form class="auth-form" id="loginForm">
+                    <div class="auth-header">
+                        <h1>Iniciar sesión</h1>
+                        <p>Accedé a tu cuenta profesional</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginEmail">Email o teléfono</label>
+                        <input type="text" id="loginEmail" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <div class="password-input">
+                            <input type="password" id="loginPassword" class="form-input" required>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Recordarme
+                        </label>
+
+                        <a href="/recuperar-contrasena" class="forgot-password">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Iniciar sesión
+                    </button>
+
+                    <div class="auth-divider">
+                        <span>o continuar con</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button type="button" class="btn btn-outline btn-social">
+                            <i class="fab fa-google"></i>
+                            Google
+                        </button>
+
+                        <button type="button" class="btn btn-outline btn-social">
+                            <i class="fab fa-facebook"></i>
+                            Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>¿No tenés cuenta? <button type="button" class="text-link" id="switchToRegister">Registrate
+                                aquí</button></p>
+                    </div>
+                </form>
+
+                <!-- Registro exitoso -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>¡Registro exitoso!</h2>
+                    <p>Hemos enviado un email de verificación a tu correo.</p>
+                    <p>Mientras tanto, podés comenzar a completar tu perfil.</p>
+
+                    <div class="success-actions">
+                        <a href="/profesional/dashboard" class="btn btn-primary">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Ir a mi panel
+                        </a>
+                        <a href="/" class="btn btn-outline">
+                            <i class="fas fa-home"></i>
+                            Volver al inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beneficios de registrarse -->
+            <div class="auth-benefits">
+                <h2>Beneficios de ser profesional en Provecino</h2>
+
+                <div class="benefits-list">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Más clientes</h4>
+                            <p>Conectá con vecinos que buscan profesionales como vos</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Construí tu reputación</h4>
+                            <p>Recibí reseñas de clientes satisfechos</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Gestión simple</h4>
+                            <p>Todo en un solo lugar: perfil, reseñas y contactos</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Comisión 0% en contacto</h4>
+                            <p>No cobramos comisión por los trabajos que conseguís</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-auth">
+                    <div class="testimonial-content">
+                        <p>"Desde que me registré en Provecino, conseguí 15 trabajos nuevos en el primer mes. La
+                            mejor
+                            inversión de tiempo que hice."</p>
+                        <div class="testimonial-author">
+                            <strong>Carlos Rodríguez</strong>
+                            <span>Gasista matriculado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span class="logo-text">Provecino</span>
+                    </a>
+                    <p class="footer-description">Conectando vecinos con profesionales de confianza desde 2024.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Vecinos</h4>
+                        <a href="/buscar" class="footer-link">Buscar Profesionales</a>
+                        <a href="/como-funciona" class="footer-link">Cómo funciona</a>
+                        <a href="/preguntas-frecuentes" class="footer-link">Preguntas frecuentes</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Profesionales</h4>
+                        <a href="/registro" class="footer-link">Registrarse gratis</a>
+                        <a href="/como-funciona#profesionales" class="footer-link">Cómo funciona</a>
+                        <a href="/contacto" class="footer-link">Contacto</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="/terminos" class="footer-link">Términos de uso</a>
+                        <a href="/privacidad" class="footer-link">Política de privacidad</a>
+                        <a href="/cookies" class="footer-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Provecino. Todos los derechos reservados.</p>
+                <p class="footer-note">Mar del Plata, Buenos Aires, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>
