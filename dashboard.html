@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Panel - Provecino</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css"> <!-- Crearás este CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="pagina-dashboard">
+    <!-- Header/Navbar del Dashboard -->
+    <header class="dashboard-header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Provecino</span>
+                </a>
+
+                <!-- Menú usuario -->
+                <div class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <div class="user-avatar">JP</div>
+                            <span class="user-name">Juan Pérez</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <a href="/dashboard" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                Mi Panel
+                            </a>
+                            <a href="/profesional/perfil" class="dropdown-item">
+                                <i class="fas fa-user-edit"></i>
+                                Mi Perfil
+                            </a>
+                            <a href="/profesional/trabajos" class="dropdown-item">
+                                <i class="fas fa-briefcase"></i>
+                                Mis Trabajos
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/configuracion" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                Configuración
+                            </a>
+                            <a href="/logout" class="dropdown-item logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar del Dashboard -->
+    <aside class="dashboard-sidebar">
+        <nav class="sidebar-nav">
+            <a href="/dashboard" class="sidebar-link active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/profesional/perfil" class="sidebar-link">
+                <i class="fas fa-user-edit"></i>
+                <span>Mi Perfil</span>
+                <span class="badge warning">Completar</span>
+            </a>
+
+            <a href="/profesional/trabajos" class="sidebar-link">
+                <i class="fas fa-briefcase"></i>
+                <span>Mis Trabajos</span>
+            </a>
+
+            <a href="/profesional/mensajes" class="sidebar-link">
+                <i class="fas fa-comments"></i>
+                <span>Mensajes</span>
+                <span class="badge">3</span>
+            </a>
+
+            <a href="/profesional/resenas" class="sidebar-link">
+                <i class="fas fa-star"></i>
+                <span>Reseñas</span>
+            </a>
+
+            <a href="/profesional/estadisticas" class="sidebar-link">
+                <i class="fas fa-chart-line"></i>
+                <span>Estadísticas</span>
+            </a>
+
+            <a href="/profesional/suscripcion" class="sidebar-link">
+                <i class="fas fa-crown"></i>
+                <span>Suscripción</span>
+                <span class="badge success">Pro</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="/ayuda" class="sidebar-link">
+                <i class="fas fa-question-circle"></i>
+                <span>Ayuda</span>
+            </a>
+
+            <a href="/configuracion" class="sidebar-link">
+                <i class="fas fa-cog"></i>
+                <span>Configuración</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal del Dashboard -->
+    <main class="dashboard-main">
+        <div class="dashboard-container">
+            <!-- Header del dashboard -->
+            <div class="dashboard-header-content">
+                <div>
+                    <h1>¡Bienvenido, Juan!</h1>
+                    <p>Aquí podés gestionar tu perfil profesional y conseguir más trabajos.</p>
+                </div>
+
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Publicar Trabajo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Alertas y notificaciones -->
+            <div class="dashboard-alerts">
+                <div class="alert warning">
+                    <div class="alert-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="alert-content">
+                        <h4>Completá tu perfil</h4>
+                        <p>Tu perfil está al 65%. Completalo al 100% para aparecer más arriba en las búsquedas.</p>
+                    </div>
+                    <a href="/profesional/perfil" class="btn btn-outline btn-sm">
+                        Completar ahora
+                    </a>
+                </div>
+            </div>
+
+            <!-- Estadísticas rápidas -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon primary">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>1,245</h3>
+                        <p>Vistas de perfil</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>24</h3>
+                        <p>Consultas este mes</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card">
+                        <div class="stat-icon accent">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>4.8</h3>
+                            <p>Calificación promedio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card">
+                        <div class="stat-icon info">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>12</h3>
+                            <p>Trabajos completados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secciones principales -->
+            <div class="dashboard-grid">
+                <!-- Consultas recientes -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Consultas recientes</h2>
+                        <a href="/profesional/mensajes" class="btn btn-link">Ver todas</a>
+                    </div>
+
+                    <div class="inquiries-list">
+                        <div class="inquiry-item">
+                            <div class="inquiry-avatar">MG</div>
+                            <div class="inquiry-content">
+                                <h4>María González</h4>
+                                <p>"Necesito un electricista para instalar un termotanque"</p>
+                                <div class="inquiry-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Centro, Mar del Plata
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        Hace 2 horas
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="inquiry-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="inquiry-item">
+                            <div class="inquiry-avatar">CR</div>
+                            <div class="inquiry-content">
+                                <h4>Carlos Rodríguez</h4>
+                                <p>"Busco plomero para reparación urgente por pérdida"</p>
+                                <div class="inquiry-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        La Perla, Mar del Plata
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        Hace 1 día
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="inquiry-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Próximos trabajos -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Próximos trabajos</h2>
+                        <a href="/profesional/trabajos" class="btn btn-link">Ver calendario</a>
+                    </div>
+
+                    <div class="jobs-list">
+                        <div class="job-item">
+                            <div class="job-header">
+                                <h4>Instalación eléctrica</h4>
+                                <span class="job-status pending">Pendiente</span>
+                            </div>
+                            <p class="job-client">Cliente: Ana Martínez</p>
+                            <div class="job-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    Mañana, 10:00 AM
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    $8,500
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="job-item">
+                            <div class="job-header">
+                                <h4>Reparación de plomería</h4>
+                                <span class="job-status confirmed">Confirmado</span>
+                            </div>
+                            <p class="job-client">Cliente: Luis Fernández</p>
+                            <div class="job-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    15 de Nov, 14:00
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    $6,200
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reseñas recientes -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Reseñas recientes</h2>
+                        <a href="/profesional/resenas" class="btn btn-link">Ver todas</a>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"Excelente trabajo, muy profesional y puntual. Solucionó el problema
+                                en menos de una hora."</p>
+                            <div class="review-author">
+                                <div class="author-avatar">SG</div>
+                                <div class="author-info">
+                                    <h5>Sofía Gómez</h5>
+                                    <span>Hace 3 días</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips para mejorar -->
+                <div class="dashboard-section tips">
+                    <div class="section-header">
+                        <h2>Tips para mejorar</h2>
+                    </div>
+
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Agregá fotos de trabajos</h4>
+                                <p>Los perfiles con galería reciben 3x más consultas</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Activá notificaciones</h4>
+                                <p>Respondé rápido a las consultas para aumentar conversiones</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Completá tu verificación</h4>
+                                <p>Los perfiles verificados generan más confianza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer del Dashboard -->
+    <footer class="dashboard-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span class="logo-text">Provecino</span>
+                    </a>
+                    <p class="footer-description">Conectando vecinos con profesionales de confianza desde 2024.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Profesional</h4>
+                        <a href="/profesional/perfil" class="footer-link">Mi Perfil</a>
+                        <a href="/profesional/trabajos" class="footer-link">Mis Trabajos</a>
+                        <a href="/profesional/suscripcion" class="footer-link">Suscripción</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Ayuda</h4>
+                        <a href="/ayuda" class="footer-link">Centro de Ayuda</a>
+                        <a href="/contacto" class="footer-link">Contacto</a>
+                        <a href="/politica-privacidad" class="footer-link">Privacidad</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Provecino. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
