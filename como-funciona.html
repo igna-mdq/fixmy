@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo funciona - Provecino</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/como-funciona.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="pagina-como-funciona">
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Provecino</span>
+                </a>
+
+                <!-- Menú desktop -->
+                <div class="nav-menu">
+                    <a href="/buscar" class="nav-link">Buscar</a>
+                    <a href="/como-funciona" class="nav-link activo">Cómo funciona</a>
+                    <a href="/registro" class="nav-link btn btn-outline">Ingresar</a>
+                </div>
+
+                <!-- Menú hamburguesa mobile -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menú móvil -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/buscar" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </a>
+                <a href="/como-funciona" class="mobile-nav-link">Cómo funciona</a>
+                <a href="/registro" class="mobile-nav-link">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero de Cómo funciona -->
+    <section class="hero como-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Cómo funciona Provecino</h1>
+                <p class="hero-subtitle">La forma más simple de encontrar profesionales de confianza en tu zona</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs de navegación -->
+    <div class="como-tabs-nav">
+        <div class="container">
+            <div class="como-tabs-container">
+                <button class="como-tab-btn activo" data-tab="vecinos">
+                    <i class="fas fa-home"></i>
+                    Para Vecinos
+                </button>
+                <button class="como-tab-btn" data-tab="profesionales">
+                    <i class="fas fa-tools"></i>
+                    Para Profesionales
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido para Vecinos -->
+    <section class="section como-tab-contenido activo" id="vecinosTab">
+        <div class="container">
+            <div class="como-paso">
+                <div class="como-step-numero-grande">1</div>
+                <div class="como-paso-contenido">
+                    <h2>Busca por necesidad o oficio</h2>
+                    <p>Contanos qué necesitás reparar, construir o instalar. Podés buscar por oficio (ej:
+                        "electricista"), por necesidad (ej: "instalar un aire acondicionado") o por palabra clave.</p>
+
+                    <div class="como-ejemplo-card">
+                        <h4>Ejemplos de búsquedas comunes:</h4>
+                        <ul class="como-lista-ejemplos">
+                            <li><i class="fas fa-search"></i> "electricista para instalar un termotanque"</li>
+                            <li><i class="fas fa-search"></i> "plomero por pérdida de agua"</li>
+                            <li><i class="fas fa-search"></i> "pintor para interior de departamento"</li>
+                            <li><i class="fas fa-search"></i> "gasista matriculado urgente"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-paso">
+                <div class="como-step-numero-grande">2</div>
+                <div class="como-paso-contenido">
+                    <h2>Compará perfiles y reseñas</h2>
+                    <p>Revisá la información completa de cada profesional: su experiencia, trabajos anteriores,
+                        calificaciones de otros vecinos y precios de referencia.</p>
+
+                    <div class="como-caracteristicas-grid">
+                        <div class="como-caracteristica">
+                            <div class="como-caracteristica-icono">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>Calificaciones verificadas</h4>
+                            <p>Solo reseñas de trabajos reales realizados a través de Provecino</p>
+                        </div>
+
+                        <div class="como-caracteristica">
+                            <div class="como-caracteristica-icono">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h4>Galería de trabajos</h4>
+                            <p>Fotos reales de trabajos anteriores realizados por el profesional</p>
+                        </div>
+
+                        <div class="como-caracteristica">
+                            <div class="como-caracteristica-icono">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Perfiles verificados</h4>
+                            <p>Identidad y matrículas verificadas cuando corresponda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-paso">
+                <div class="como-step-numero-grande">3</div>
+                <div class="como-paso-contenido">
+                    <h2>Contactá directo y coordiná</h2>
+                    <p>Elegí al profesional que más te convenga y contactalo directamente por WhatsApp o teléfono. Sin
+                        intermediarios, sin comisiones.</p>
+
+                    <div class="como-opciones-contacto">
+                        <div class="como-opcion-contacto">
+                            <div class="como-opcion-icono whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h4>WhatsApp directo</h4>
+                            <p>Contacto inmediato con el profesional</p>
+                        </div>
+
+                        <div class="como-opcion-contacto">
+                            <div class="como-opcion-icono phone">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4>Llamada telefónica</h4>
+                            <p>Número directo para consultas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-cta">
+                <h2>¿Listo para encontrar a tu profesional ideal?</h2>
+                <a href="/buscar" class="btn btn-primary btn-lg">
+                    <i class="fas fa-search"></i>
+                    Buscar profesionales ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido para Profesionales -->
+    <section class="section como-tab-contenido" id="profesionalesTab">
+        <div class="container">
+            <div class="como-paso">
+                <div class="como-step-numero-grande">1</div>
+                <div class="como-paso-contenido">
+                    <h2>Registrate gratis en minutos</h2>
+                    <p>Creá tu perfil profesional con tus datos, oficios, zona de trabajo y experiencia. Es
+                        completamente gratuito para comenzar.</p>
+
+                    <div class="como-caracteristicas-registro">
+                        <div class="como-caracteristica-reg">
+                            <h4><i class="fas fa-check-circle"></i> Sin costo inicial</h4>
+                            <p>Creá tu perfil y comenzá a recibir consultas sin pagar nada</p>
+                        </div>
+
+                        <div class="como-caracteristica-reg">
+                            <h4><i class="fas fa-mobile-alt"></i> Fácil y rápido</h4>
+                            <p>Completá tu perfil desde tu celular en menos de 10 minutos</p>
+                        </div>
+
+                        <div class="como-caracteristica-reg">
+                            <h4><i class="fas fa-clock"></i> Disponible 24/7</h4>
+                            <p>Tu perfil está visible para vecinos en cualquier momento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-paso">
+                <div class="como-step-numero-grande">2</div>
+                <div class="como-paso-contenido">
+                    <h2>Destacá tu perfil y recibí más trabajos</h2>
+                    <p>Mostrá tus mejores trabajos, certificaciones y recibí reseñas de clientes satisfechos para
+                        generar más confianza.</p>
+
+                    <div class="como-consejos-perfil">
+                        <div class="como-consejo">
+                            <div class="como-consejo-icono">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="como-consejo-contenido">
+                                <h4>Subí fotos de tus trabajos</h4>
+                                <p>Una galería completa aumenta tu credibilidad</p>
+                            </div>
+                        </div>
+
+                        <div class="como-consejo">
+                            <div class="como-consejo-icono">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="como-consejo-contenido">
+                                <h4>Agregá tus certificaciones</h4>
+                                <p>Matrículas, cursos y especializaciones</p>
+                            </div>
+                        </div>
+
+                        <div class="como-consejo">
+                            <div class="como-consejo-icono">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="como-consejo-contenido">
+                                <h4>Solicitá reseñas a tus clientes</h4>
+                                <p>Las buenas calificaciones atraen más trabajo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-paso">
+                <div class="como-step-numero-grande">3</div>
+                <div class="como-paso-contenido">
+                    <h2>Gestioná tus contactos y crecé</h2>
+                    <p>Recibí consultas directas de vecinos, coordiná los trabajos y seguí creciendo tu reputación en la
+                        plataforma.</p>
+
+                    <div class="como-caracteristicas-gestion">
+                        <div class="como-caracteristica-gestion">
+                            <div class="como-gestion-icono">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Estadísticas de tu perfil</h4>
+                            <p>Ve cuántas personas vieron tu perfil y te contactaron</p>
+                        </div>
+
+                        <div class="como-caracteristica-gestion">
+                            <div class="como-gestion-icono">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4>Disponibilidad personalizada</h4>
+                            <p>Indicá tus horarios y días de atención</p>
+                        </div>
+
+                        <div class="como-caracteristica-gestion">
+                            <div class="como-gestion-icono">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h4>Define tu zona de trabajo</h4>
+                            <p>Trabajá en los barrios que más te convengan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-comparacion-planes">
+                <h2>Elegí el plan que más te convenga</h2>
+
+                <div class="como-planes-grid">
+                    <div class="como-plan-card">
+                        <div class="como-plan-header">
+                            <h3>Gratis</h3>
+                            <div class="como-plan-precio">$0<span>/mes</span></div>
+                        </div>
+
+                        <ul class="como-plan-caracteristicas">
+                            <li><i class="fas fa-check"></i> Perfil básico</li>
+                            <li><i class="fas fa-check"></i> Hasta 3 fotos</li>
+                            <li><i class="fas fa-check"></i> 1 oficio</li>
+                            <li><i class="fas fa-check"></i> Contacto por WhatsApp</li>
+                            <li><i class="fas fa-check"></i> Aparece en búsquedas</li>
+                        </ul>
+
+                        <button class="btn btn-outline btn-block" onclick="seleccionarPlan('Gratis')">
+                            Comenzar gratis
+                        </button>
+                    </div>
+
+                    <div class="como-plan-card destacado">
+                        <div class="como-plan-badge">Más popular</div>
+                        <div class="como-plan-header">
+                            <h3>Pro</h3>
+                            <div class="como-plan-precio">$5.000<span>/mes</span></div>
+                        </div>
+
+                        <ul class="como-plan-caracteristicas">
+                            <li><i class="fas fa-check"></i> Todo el plan Gratis</li>
+                            <li><i class="fas fa-check"></i> Fotos ilimitadas</li>
+                            <li><i class="fas fa-check"></i> Hasta 3 oficios</li>
+                            <li><i class="fas fa-check"></i> Perfil destacado</li>
+                            <li><i class="fas fa-check"></i> Estadísticas básicas</li>
+                            <li><i class="fas fa-check"></i> Verificación de perfil</li>
+                        </ul>
+
+                        <button class="btn btn-primary btn-block" onclick="seleccionarPlan('Pro')">
+                            Elegir plan Pro
+                        </button>
+                    </div>
+
+                    <div class="como-plan-card">
+                        <div class="como-plan-header">
+                            <h3>Premium</h3>
+                            <div class="como-plan-precio">$10.000<span>/mes</span></div>
+                        </div>
+
+                        <ul class="como-plan-caracteristicas">
+                            <li><i class="fas fa-check"></i> Todo el plan Pro</li>
+                            <li><i class="fas fa-check"></i> Posición privilegiada</li>
+                            <li><i class="fas fa-check"></i> Hasta 5 oficios</li>
+                            <li><i class="fas fa-check"></i> Estadísticas avanzadas</li>
+                            <li><i class="fas fa-check"></i> Asistencia prioritaria</li>
+                            <li><i class="fas fa-check"></i> Promoción en redes</li>
+                        </ul>
+
+                        <button class="btn btn-outline btn-block" onclick="seleccionarPlan('Premium')">
+                            Elegir plan Premium
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="como-cta">
+                <h2>¿Listo para conseguir más trabajos?</h2>
+                <a href="/registro" class="btn btn-primary btn-lg">
+                    <i class="fas fa-user-plus"></i>
+                    Crear mi perfil gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="section como-faq-seccion">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+
+            <div class="como-faq-contenedor">
+                <div class="como-faq-item">
+                    <button class="como-faq-pregunta" id="faq-1">
+                        ¿Es gratis usar Provecino?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="como-faq-respuesta">
+                        <p>Para los vecinos que buscan profesionales, sí, es completamente gratuito. Los profesionales
+                            pueden crear un perfil básico gratis o optar por planes pagos con más funcionalidades.</p>
+                    </div>
+                </div>
+
+                <div class="como-faq-item">
+                    <button class="como-faq-pregunta" id="faq-2">
+                        ¿Cómo se verifican los profesionales?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="como-faq-respuesta">
+                        <p>Verificamos la identidad con DNI, solicitamos matrículas cuando corresponda (gasistas,
+                            electricistas) y validamos la información de contacto. También revisamos las reseñas para
+                            asegurar que sean de trabajos reales.</p>
+                    </div>
+                </div>
+
+                <div class="como-faq-item">
+                    <button class="como-faq-pregunta" id="faq-3">
+                        ¿Puedo contactar al profesional directamente?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="como-faq-respuesta">
+                        <p>Sí, Provecino conecta directamente al vecino con el profesional. No hay intermediarios en la
+                            conversación ni en la coordinación del trabajo.</p>
+                    </div>
+                </div>
+
+                <div class="como-faq-item">
+                    <button class="como-faq-pregunta" id="faq-4">
+                        ¿Qué hago si tengo un problema con un profesional?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="como-faq-respuesta">
+                        <p>Contamos con un sistema de mediación. Si tenés un problema, contactanos y nuestro equipo te
+                            ayudará a resolver la situación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span class="logo-text">Provecino</span>
+                    </a>
+                    <p class="footer-description">Conectando vecinos con profesionales de confianza desde 2024.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Vecinos</h4>
+                        <a href="/buscar" class="footer-link">Buscar Profesionales</a>
+                        <a href="/como-funciona" class="footer-link">Cómo funciona</a>
+                        <a href="/preguntas-frecuentes" class="footer-link">Preguntas frecuentes</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Profesionales</h4>
+                        <a href="/registro" class="footer-link">Registrarse gratis</a>
+                        <a href="/como-funciona#profesionales" class="footer-link">Cómo funciona</a>
+                        <a href="/contacto" class="footer-link">Contacto</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="/terminos" class="footer-link">Términos de uso</a>
+                        <a href="/privacidad" class="footer-link">Política de privacidad</a>
+                        <a href="/cookies" class="footer-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Provecino. Todos los derechos reservados.</p>
+                <p class="footer-note">Mar del Plata, Buenos Aires, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/como-funciona.js"></script>
+</body>
+
+</html>
