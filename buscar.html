@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Profesionales - Provecino</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buscar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="pagina-busqueda">
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Provecino</span>
+                </a>
+
+                <!-- Selector de ciudad -->
+                <div class="ciudad-selector">
+                    <select id="ciudadSelect">
+                        <option value="Mar del Plata" selected>Mar del Plata</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Rosario">Rosario</option>
+                    </select>
+                    <span class="ciudad-badge success">¡Disponible!</span>
+                </div>
+
+                <!-- Menú desktop -->
+                <div class="nav-menu">
+                    <a href="/buscar" class="nav-link active">
+                        <i class="fas fa-search"></i>
+                        Buscar
+                    </a>
+                    <a href="/como-funciona" class="nav-link">Cómo funciona</a>
+                    <a href="/registro" class="nav-link btn btn-outline">Ingresar</a>
+                </div>
+
+                <!-- Menú hamburguesa mobile -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Menú móvil -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/buscar" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </a>
+                <a href="/como-funciona" class="mobile-nav-link">Cómo funciona</a>
+                <a href="/registro" class="mobile-nav-link">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Barra de búsqueda principal -->
+    <section class="busqueda-hero">
+        <div class="container">
+            <div class="busqueda-contenedor">
+                <h1 class="busqueda-titulo">Encontrá al profesional que necesitás</h1>
+
+                <form class="busqueda-formulario" id="searchForm">
+                    <div class="busqueda-input-grupo">
+                        <div class="busqueda-icono">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" class="busqueda-input"
+                            placeholder="¿Qué necesitás? Ej: electricista, plomero, pintor..." id="searchQuery">
+                        <button type="submit" class="btn btn-primary busqueda-btn">
+                            Buscar
+                        </button>
+                    </div>
+
+                    <div class="busqueda-filtros">
+                        <div class="filtro-grupo">
+                            <label for="ciudad"><i class="fas fa-map-marker-alt"></i> Ciudad</label>
+                            <select id="ciudad" class="filtro-select">
+                                <option value="todos">Toda Mar del Plata</option>
+                                <option value="centro">Centro</option>
+                                <option value="puerto">Puerto</option>
+                                <option value="plaza-peralta">Plaza Peralta Ramos</option>
+                                <option value="la-perla">La Perla</option>
+                                <option value="las-canteras">Las Canteras</option>
+                                <option value="villa-st-john">Villa St. John</option>
+                            </select>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <label for="servicio"><i class="fas fa-tools"></i> Tipo de servicio</label>
+                            <select id="servicio" class="filtro-select">
+                                <option value="todos">Todos los servicios</option>
+                                <option value="electricidad">Electricidad</option>
+                                <option value="plomeria">Plomería</option>
+                                <option value="gas">Gas</option>
+                                <option value="pintura">Pintura</option>
+                                <option value="albanileria">Albañilería</option>
+                                <option value="carpinteria">Carpintería</option>
+                                <option value="mecanica">Mecánica</option>
+                            </select>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <label for="urgencia"><i class="fas fa-clock"></i> Urgencia</label>
+                            <select id="urgencia" class="filtro-select">
+                                <option value="todos">Cualquier momento</option>
+                                <option value="hoy">Disponible hoy</option>
+                                <option value="semana">Esta semana</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-outline" id="moreFiltersBtn">
+                            <i class="fas fa-filter"></i>
+                            Más filtros
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de filtros avanzados -->
+    <div class="busqueda-modal-overlay" id="filtersModal">
+        <div class="busqueda-modal">
+            <div class="busqueda-modal-header">
+                <h3>Filtros avanzados</h3>
+                <button class="busqueda-modal-close" id="closeFiltersBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="busqueda-modal-body">
+                <div class="busqueda-filtro-seccion">
+                    <h4>Precio</h4>
+                    <div class="busqueda-rango-precio">
+                        <div class="busqueda-rango-inputs">
+                            <input type="number" id="minPrice" placeholder="Mínimo" class="busqueda-rango-input">
+                            <span>a</span>
+                            <input type="number" id="maxPrice" placeholder="Máximo" class="busqueda-rango-input">
+                        </div>
+                        <p class="busqueda-rango-nota">Dejar vacío para cualquier precio</p>
+                    </div>
+                </div>
+
+                <div class="busqueda-filtro-seccion">
+                    <h4>Calificación mínima</h4>
+                    <div class="busqueda-filtro-calificacion">
+                        <div class="busqueda-seleccion-estrellas">
+                            <span class="busqueda-estrellas">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </span>
+                            <span id="selectedRatingText">Cualquier calificación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="busqueda-filtro-seccion">
+                    <h4>Verificación</h4>
+                    <div class="busqueda-checkbox-grupo">
+                        <label class="busqueda-checkbox-label">
+                            <input type="checkbox" id="verifiedOnly">
+                            <span class="busqueda-checkmark"></span>
+                            Solo profesionales verificados
+                        </label>
+                    </div>
+                </div>
+
+                <div class="busqueda-filtro-seccion">
+                    <h4>Experiencia</h4>
+                    <div class="busqueda-checkbox-grupo">
+                        <label class="busqueda-checkbox-label">
+                            <input type="checkbox" id="experience5">
+                            <span class="busqueda-checkmark"></span>
+                            Más de 5 años de experiencia
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="busqueda-modal-footer">
+                <button class="btn btn-outline" id="clearFiltersBtn">
+                    Limpiar filtros
+                </button>
+                <button class="btn btn-primary" id="applyFiltersBtn">
+                    Aplicar filtros
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultados de búsqueda -->
+    <main class="busqueda-resultados">
+        <div class="container">
+            <div class="busqueda-resultados-header">
+                <div class="busqueda-resultados-info">
+                    <h2 id="resultsCount">24 profesionales encontrados</h2>
+                    <p id="resultsQuery">para "electricista" en Mar del Plata</p>
+                </div>
+
+                <div class="busqueda-resultados-ordenar">
+                    <label for="sortBy">Ordenar por:</label>
+                    <select id="sortBy" class="busqueda-ordenar-select">
+                        <option value="relevancia">Más relevantes</option>
+                        <option value="calificacion">Mejor calificados</option>
+                        <option value="proximidad">Más cercanos</option>
+                        <option value="precio-bajo">Precio más bajo</option>
+                        <option value="precio-alto">Precio más alto</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="busqueda-resultados-contenido">
+                <!-- Lista de resultados -->
+                <div class="busqueda-resultados-lista" id="resultsList">
+                    <!-- Los resultados se cargarán con JavaScript -->
+                </div>
+
+                <!-- Mapa (lado derecho en desktop) -->
+                <div class="busqueda-resultados-mapa" id="resultsMap">
+                    <div class="busqueda-mapa-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Mapa de profesionales</h3>
+                        <p>Aquí se mostrarán las ubicaciones de los profesionales</p>
+                        <button class="btn btn-outline" id="toggleMapBtn">
+                            <i class="fas fa-expand-alt"></i>
+                            Ver mapa completo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paginación -->
+            <div class="busqueda-paginacion">
+                <button class="busqueda-paginacion-btn anterior" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Anterior
+                </button>
+
+                <div class="busqueda-paginacion-paginas">
+                    <span class="busqueda-pagina activa">1</span>
+                    <span class="busqueda-pagina">2</span>
+                    <span class="busqueda-pagina">3</span>
+                    <span class="busqueda-pagina">...</span>
+                    <span class="busqueda-pagina">8</span>
+                </div>
+
+                <button class="busqueda-paginacion-btn siguiente">
+                    Siguiente
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Sin resultados -->
+            <div class="busqueda-sin-resultados" id="noResults" style="display: none;">
+                <div class="busqueda-sin-resultados-icono">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>No encontramos profesionales que coincidan</h3>
+                <p>Intentá con otros términos o filtros de búsqueda.</p>
+                <button class="btn btn-primary" id="clearSearchBtn">
+                    Limpiar búsqueda
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">🔧</span>
+                        <span class="logo-text">Provecino</span>
+                    </a>
+                    <p class="footer-description">Conectando vecinos con profesionales de confianza desde 2024.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Vecinos</h4>
+                        <a href="/buscar" class="footer-link">Buscar Profesionales</a>
+                        <a href="/como-funciona" class="footer-link">Cómo funciona</a>
+                        <a href="/preguntas-frecuentes" class="footer-link">Preguntas frecuentes</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Para Profesionales</h4>
+                        <a href="/registro" class="footer-link">Registrarse gratis</a>
+                        <a href="/como-funciona#profesionales" class="footer-link">Cómo funciona</a>
+                        <a href="/contacto" class="footer-link">Contacto</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="/terminos" class="footer-link">Términos de uso</a>
+                        <a href="/privacidad" class="footer-link">Política de privacidad</a>
+                        <a href="/cookies" class="footer-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Provecino. Todos los derechos reservados.</p>
+                <p class="footer-note">Mar del Plata, Buenos Aires, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/buscar.js"></script>
+</body>
+
+</html>
